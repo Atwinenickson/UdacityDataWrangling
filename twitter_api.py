@@ -15,6 +15,10 @@ auth.set_access_token(access_token, access_secret)
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
+df1 = pd.read_csv('twitter-archive-enhanced.csv', sep = ',')
+
+print(df.head())
+
 # NOTE TO STUDENT WITH MOBILE VERIFICATION ISSUES:
 # df_1 is a DataFrame with the twitter_archive_enhanced.csv file. You may have to
 # change line 17 to match the name of your DataFrame with twitter_archive_enhanced.csv
