@@ -9,13 +9,13 @@ with open("tweet-json.txt") as file:
         total_objects.append(item)
 
 for item in total_objects:
-    pp = json.loads(item)
-    r = pp['created_at']
-    pr = pp['retweet_count']
-    id = pp['id']
-    rp = pp['favorite_count']
+    list_items = json.loads(item)
+    created_at = list_items['created_at']
+    retweet_count = list_items['retweet_count']
+    id = list_items['id']
+    favorite_count = list_items['favorite_count']
 
-    my_dict = {"S.No.": [id], "Item":[pr], "Quantity": [rp], "Price": [r]}
+    my_dict = {"TWEETID": [id], "RETWEETCOUNT":[retweet_count], "FAVOURITECOUNT": [favorite_count], "DATECREATED": [created_at]}
     total_dict.append(my_dict)
 
 
